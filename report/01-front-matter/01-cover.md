@@ -22,8 +22,8 @@
 {\large \textbf {Código - Apellidos y Nombres} } \\[0.2cm]
 {\large \text codigo - integrante } \\[0.2cm]
 {\large \text U202312348 - Said Conde, Yazid } \\[0.2cm]
-{\large \text codigo - integrante } \\[0.2cm]
-{\large \text codigo - integrante } \\[0.2cm]
+{\large \text U202120011 -  Martinez Gaona, Pablo } \\[0.2cm]
+{\large \text u202418623 - Contreras Panuera,Fernando Fabrizio } \\[0.2cm]
 {\large \text codigo - integrante } \\[0.5cm]
 
 {\large \textbf{Período 202620}} \\[1cm]
