@@ -5,6 +5,7 @@ En esta seccion se formaliza la arquitectura de software de VitaLink bajo los pr
 ### 4.6.1. Design-Level Event Storming
 
 A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Event Storming para refinar el modelo del dominio. Se definieron cuatro Bounded Contexts principales con sus respectivos comandos, eventos de dominio, agregados y modelos de lectura (queries):
+![Event Storming](../../assets/Chapter-Four/event-brainstorming.png)
 
 #### 1. Monitoring Bounded Context
 * **Proposito:** Administrar la telemetria fisiologica en tiempo real, evaluando lecturas frente a rangos clinicos predefinidos.
@@ -12,6 +13,7 @@ A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Eve
 * **Commands:** `RecordVitalSigns`, `ProcessTelemetryStream`, `VerifyThresholds`.
 * **Domain Events:** `VitalSignsRecorded`, `ThresholdExceeded`, `FallPatternDetected`.
 * **Read Models (Queries):** `GetLatestVitalSignsQuery`, `GetBiometricHistoryQuery`.
+![Monitoring Bounded Context](../../assets/Chapter-Four/Monitoring_BC.png)
 
 #### 2. Emergency & Notification Bounded Context
 * **Proposito:** Orquestar el despacho de alertas de emergencia y controlar el escalamiento multicanal hacia la red de apoyo familiar.
@@ -19,6 +21,7 @@ A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Eve
 * **Commands:** `TriggerEmergencyAlert`, `AcknowledgeAlert`, `EscalateNotification`.
 * **Domain Events:** `EmergencyAlertTriggered`, `AlertAcknowledgedByCaregiver`, `AlertEscalated`.
 * **Read Models (Queries):** `GetActiveAlertsQuery`, `GetAlertAuditTrailQuery`.
+![Emergency & Notification Bounded Context](../../assets/Chapter-Four/E&N_BC.png)
 
 #### 3. Triage & Clinical Scheduling Bounded Context
 * **Proposito:** Clasificar el nivel de gravedad clinica del paciente y pre-agendar de manera reactiva citas en la red de centros de salud aliados.
@@ -26,6 +29,7 @@ A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Eve
 * **Commands:** `EvaluateClinicalRisk`, `PreScheduleAppointment`, `ConfirmAppointment`.
 * **Domain Events:** `RiskEvaluated`, `AppointmentPreScheduled`, `AppointmentConfirmed`.
 * **Read Models (Queries):** `SearchAvailableMedicalSlotsQuery`, `ExportTriageSummaryQuery`.
+![Triage & Clinical Scheduling Bounded Context](../../assets/Chapter-Four/T&C_Scheduling_BC.png)
 
 #### 4. IAM & Profile Bounded Context
 * **Proposito:** Gestionar la identidad, control de accesos, roles y vinculaciones familiares entre el paciente y sus tutores legales.
@@ -33,6 +37,7 @@ A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Eve
 * **Commands:** `RegisterUser`, `AuthenticateUser`, `LinkCaregiverToPatient`.
 * **Domain Events:** `UserRegistered`, `UserAuthenticated`, `CaregiverLinked`.
 * **Read Models (Queries):** `GetUserProfileQuery`, `GetAffiliatedPatientsQuery`.
+![IAM & Profile Bounded Context](../../assets/Chapter-Four/IAM_BC.png)
 
 ### 4.6.2. Software Architecture Context Diagram
 
