@@ -72,14 +72,14 @@ A largo plazo, VitaLink podrá evolucionar mediante la integración con disposit
 
 \noindent
 \begin{tabular}{p{0.72\textwidth} p{0.23\textwidth}}
-    \textbf{Integrante 1: (Escribe aca)} \newline
-    \textbf{Código de estudiante:} (Escribe aca) \newline
-    \textbf{Carrera:} (Escribe aca) \newline
-    \textbf{Descripción:} (Escribe aca) \newline
-    \textbf{Aporte al equipo:} (Escribe aca)
+    \textbf{Integrante 1: Quiliano Motta, Kirk Douglas} \newline
+    \textbf{Código de estudiante:} u202411378 \newline
+    \textbf{Carrera:} Ingeniería de Software \newline
+    \textbf{Descripción:} Soy un estudiante comprometido y responsable, enfocado en la constancia y el avance oportuno de los entregables críticos para asegurar el éxito del equipo. \newline
+    \textbf{Aporte al equipo:} Tengo responsabilidad y compromiso demostrado a través de la constancia en el avance de los entregables críticos de diseño, asegurando que el equipo cuente a tiempo con la documentación necesaria para la entrega.
     & 
     \vspace{-0.5cm} % Ajusta este valor para subir/bajar la foto
-    \includegraphics[width=\linewidth]{assets/f1.jpeg}
+    \includegraphics[width=\linewidth]{assets/f3.png}
 \end{tabular}
 
 \vspace{0.8cm}
