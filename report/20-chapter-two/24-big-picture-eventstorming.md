@@ -35,5 +35,6 @@ La sesion se desarrollo en Miro, organizando los elementos mediante una linea de
 #### Diagrama de Big Picture Event Storming
 
 \begin{center}
-\includegraphics[width=0.7\linewidth]{assets/Big_Picture_Event_Storming.jpg}
+    \includegraphics[width=0.7\linewidth]{assets/Big_Picture_Event_Storming.jpg}
 \end{center}
+
