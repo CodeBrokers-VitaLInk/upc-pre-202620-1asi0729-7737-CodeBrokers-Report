@@ -2,340 +2,48 @@
 
 ## 3.1. User Stories
 
-VitaLink construye sus historias de usuario a partir del análisis de las 6 entrevistas ya registradas (3 familiares + 3 adultos mayores, más las entrevistas del segmento clínico — ver [22-entrevistas.md](../20-chapter-two/22-entrevistas.md)) y de los dos segmentos objetivo definidos para la plataforma: **Profesionales de Salud** y **Familiares / Adultos Mayores**. Las historias se agrupan en Epics y se documentan en tres bloques: Landing Page, Aplicación Web (Frontend), y API RESTful (Backend), cada una con ID, título, descripción y criterios de aceptación verificables en formato Gherkin (**Given–When–Then**).
+Las User Stories de VitaLink se derivan de las 6 entrevistas registradas ([2.2. Entrevistas](../20-chapter-two/22-entrevistas.md)) para los segmentos Profesionales de Salud y Familiares/Adultos Mayores. Las historias de Landing Page usan como rol base *visitante* (con el subconjunto de segmento cuando aplica), y las Technical Stories del API RESTful usan el rol *Developer*, describiendo el escenario de interacción request/response en Gherkin.
 
-### Epics
-
-| ID | Epic | Descripción |
-|----|------|-------------|
-| **EP-01** | Captación y Confianza (Landing Page) | Comunicar la propuesta de valor de VitaLink a ambos segmentos y convertir visitantes en usuarios registrados. |
-| **EP-02** | Monitoreo Clínico y Gestión de Alertas | Dar a los profesionales de salud una vista operativa de sus pacientes y del ciclo de vida de cada alerta. |
-| **EP-03** | Acompañamiento Familiar y Autocuidado | Permitir que familiares y adultos mayores sigan el estado de salud y actúen ante una alerta. |
-| **EP-04** | Plataforma de Datos y Alertas (API) | Sostener con datos confiables y trazables el flujo Sentir → Analizar → Actuar entre wearables, backend e IA. |
-
-> Los términos técnicos citados en esta sección (*Biometric Telemetry*, *Vital Signs Baseline*, *Family Caregiver*, *Clinical Health Record*) siguen el glosario definido en [2.5. Ubiquitous Language](../20-chapter-two/25-ubiquitous-language.md).
-
----
-
-### User Stories — Landing Page (EP-01)
-
-**US-01 · Entender la propuesta de valor en segundos**
-*Como* visitante médico, *quiero* entender en segundos qué problema resuelve VitaLink, *para* decidir si me interesa conocer más.
-```gherkin
-Given un visitante médico que ingresa por primera vez a la landing page
-When la sección Hero termina de cargar
-Then el visitante ve, sin necesidad de hacer scroll, el nombre de VitaLink y una frase que resume el problema que resuelve
-```
-
-**US-02 · Confiar antes de registrar datos de pacientes**
-*Como* profesional de salud, *quiero* ver una sección de privacidad/seguridad de datos, *para* confiar en registrar información de mis pacientes.
-```gherkin
-Given un profesional de salud navegando la landing page
-When llega a la sección "Seguridad de grado médico"
-Then visualiza referencias explícitas a cifrado E2E, cumplimiento HIPAA & GDPR y control de acceso (RBAC)
-```
-
-**US-03 · Solicitar información antes de registrarse**
-*Como* profesional de salud, *quiero* un botón claro para "solicitar información" antes de registrarme, *para* evaluar la herramienta sin compromiso.
-```gherkin
-Given un profesional de salud interesado pero no convencido de registrarse
-When hace clic en el botón "Solicitar información técnica"
-Then se despliega un formulario de contacto que no exige crear una cuenta
-```
-
-**US-04 · Unirme como proveedor de salud**
-*Como* profesional de salud, *quiero* un botón específico para "unirme como proveedor de salud", *para* iniciar mi registro directamente.
-```gherkin
-Given un profesional de salud decidido a afiliarse
-When hace clic en "Unirme como proveedor"
-Then inicia el flujo de registro institucional diferenciado del registro de familiares
-```
-
-**US-05 · Ver un ejemplo visual de una alerta**
-*Como* profesional de salud, *quiero* ver un ejemplo visual simple de cómo se ve una alerta, *para* entender rápido cómo funciona el seguimiento.
-```gherkin
-Given un profesional de salud en la sección "Protocolo de Alerta Inteligente"
-When observa el mockup ilustrativo incluido en esa sección
-Then identifica visualmente el nivel de urgencia, el paciente y la acción disponible sin leer documentación adicional
-```
-
-**US-06 · Entender el beneficio sin llamadas constantes**
-*Como* familiar, *quiero* entender en segundos cómo la app me ayuda a saber del estado de mi padre/madre sin llamarlo constantemente, *para* decidir si me interesa registrarme.
-```gherkin
-Given un familiar que ingresa por primera vez a la landing page
-When la sección Hero termina de cargar
-Then el familiar identifica de inmediato el beneficio de monitoreo remoto sin necesidad de llamadas frecuentes
-```
-
-**US-07 · Confiar en quién ve los datos de salud**
-*Como* familiar, *quiero* ver una sección clara de privacidad que explique quién puede ver los datos de salud de mi familiar, *para* confiar en registrar su información.
-```gherkin
-Given un familiar evaluando si registrar a su adulto mayor
-When revisa la sección de privacidad de la landing page
-Then encuentra una explicación en lenguaje simple de qué roles (familiar, médico) acceden a qué datos
-```
-
-**US-08 · Conocer cómo funciona antes de crear cuenta**
-*Como* familiar, *quiero* un botón para "conocer cómo funciona" antes de crear una cuenta, *para* entender el proceso sin comprometerme aún.
-```gherkin
-Given un familiar indeciso sobre registrarse
-When hace clic en "Conocer cómo funciona"
-Then accede a la explicación del flujo Sentir → Analizar → Actuar sin que se le solicite ningún dato personal
-```
-
-**US-09 · Entender la app sin tecnicismos**
-*Como* adulto mayor o su cuidador, *quiero* ver un mensaje simple (sin tecnicismos) que explique qué hace la app, *para* entender rápido si me sirve.
-```gherkin
-Given un adulto mayor o cuidador con baja familiaridad tecnológica
-When lee el mensaje principal de la landing page
-Then el texto evita jerga médica o técnica y comunica el beneficio en una sola idea
-```
-
-**US-10 · Ver qué esperar antes de registrarse**
-*Como* visitante, *quiero* ver un ejemplo visual de cómo se ve una alerta o el dashboard, *para* saber qué esperar antes de registrarme.
-```gherkin
-Given un visitante familiar en la landing page
-When llega a la sección que ilustra el dashboard
-Then visualiza una captura representativa del panel familiar antes de crear una cuenta
-```
-
----
-
-### User Stories — Aplicación Web: Profesionales de Salud (EP-02)
-
-**US-11 · Resumen inicial de alertas pendientes**
-*Como* médico, *quiero* ver un resumen inicial con la cantidad de pacientes con alertas pendientes, *para* priorizar mi atención al iniciar el día.
-```gherkin
-Given un médico que inicia sesión en el dashboard
-When la vista principal termina de cargar
-Then observa un contador de alertas pendientes agrupado por nivel de urgencia
-```
-
-**US-12 · Nivel de urgencia visual**
-*Como* médico, *quiero* ver el nivel de urgencia de cada alerta de forma visual (color/etiqueta), *para* decidir rápido qué revisar primero.
-```gherkin
-Given una lista de alertas en el dashboard médico
-When el médico observa cada fila de la lista
-Then cada alerta muestra un color y una etiqueta de urgencia sin necesidad de abrir el detalle
-```
-
-**US-13 · Acceder al detalle de un paciente**
-*Como* médico, *quiero* acceder al detalle de un paciente desde el resumen, *para* revisar contexto sin buscar en varias pantallas.
-```gherkin
-Given una alerta listada en el resumen del dashboard
-When el médico hace clic sobre esa alerta
-Then se abre el detalle del paciente asociado sin salir del flujo de revisión de alertas
-```
-
-**US-14 · Historial ordenado por fecha**
-*Como* médico, *quiero* ver el historial de registros de un paciente ordenado por fecha, *para* entender su evolución sin papeles dispersos.
-```gherkin
-Given el detalle de un paciente
-When el médico abre la pestaña de historial
-Then los registros se listan en orden cronológico descendente
-```
-
-**US-15 · Marcar una alerta como revisada o atendida**
-*Como* médico, *quiero* marcar una alerta como "en revisión" o "atendida", *para* que otros sepan el estado del caso.
-```gherkin
-Given una alerta en estado "pendiente"
-When el médico selecciona la acción "Marcar en revisión" o "Marcar atendida"
-Then el estado de la alerta cambia visiblemente para todos los usuarios con acceso, sin eliminar el registro original
-```
-
-**US-16 · Agregar una observación breve**
-*Como* médico, *quiero* agregar una observación breve al atender una alerta, *para* dejar registro rápido de lo ocurrido.
-```gherkin
-Given una alerta que el médico acaba de atender
-When ingresa un texto breve en el campo de observaciones y confirma
-Then la observación queda asociada a la alerta y visible en el historial del paciente
-```
-
-**US-17 · Evitar revisiones duplicadas**
-*Como* médico, *quiero* ver si un caso ya fue revisado por otra persona, *para* evitar duplicar esfuerzos.
-```gherkin
-Given una alerta que ya fue marcada "en revisión" por otro profesional
-When el médico abre esa alerta
-Then el sistema muestra quién la está revisando y desde cuándo, antes de permitir una nueva acción
-```
-
----
-
-### User Stories — Aplicación Web: Familiares y Adultos Mayores (EP-03)
-
-**US-18 · Estado general al abrir la app**
-*Como* familiar y adulto mayor, *quiero* ver un estado general simple ("todo bien" / "necesita atención") al abrir la app, *para* saber de inmediato si debo actuar.
-```gherkin
-Given un familiar o adulto mayor que abre la aplicación
-When la pantalla principal termina de cargar
-Then observa un indicador de estado general, sin necesidad de interpretar datos crudos
-```
-
-**US-19 · Recibir una alerta comprensible**
-*Como* familiar y adulto mayor, *quiero* recibir una alerta que indique qué pasó, qué tan grave es y si ya alguien está atendiendo la situación, *para* decidir si debo intervenir.
-```gherkin
-Given un evento fuera de rango detectado
-When se genera la alerta correspondiente
-Then el destinatario recibe una notificación con la causa, el nivel de gravedad y el estado de atención actual
-```
-
-**US-20 · Confirmar atención con un solo botón**
-*Como* familiar y adulto mayor, *quiero* confirmar con un solo botón que ya contacté o atendí a mi familiar, *para* que el resto de la familia sepa que el caso está cubierto.
-```gherkin
-Given una alerta activa
-When se presiona "Ya atendí este caso"
-Then la alerta se marca como atendida por esa persona y es visible para el resto de la red familiar autorizada
-```
-
-**US-21 · Historial simple sin preguntar directamente**
-*Como* familiar y adulto mayor, *quiero* ver un historial simple de días anteriores, *para* revisar el bienestar de mi familiar sin tener que preguntarle directamente.
-```gherkin
-Given un usuario en la vista de historial
-When selecciona un rango de días anteriores
-Then visualiza un resumen simplificado del estado diario, sin necesidad de interpretar valores clínicos
-```
-
-**US-22 · Ver el dato que originó una alerta**
-*Como* familiar y adulto mayor, *quiero* ver el dato específico que originó una alerta (ej. presión alta), *para* entender la gravedad real sin depender solo de una descripción genérica.
-```gherkin
-Given una alerta abierta
-When se revisa su detalle
-Then se encuentra el valor medido, el rango normal esperado y la desviación detectada
-```
-
-**US-23 · Evitar duplicar esfuerzos entre familiares**
-*Como* familiar y adulto mayor, *quiero* saber si otro miembro de la familia ya revisó o atendió una alerta, *para* no duplicar esfuerzos ni generar confusión.
-```gherkin
-Given una alerta ya atendida por otro familiar autorizado
-When otro familiar la abre
-Then el sistema indica claramente quién la atendió y en qué momento
-```
-
-**US-24 · Mantener actualizada la red familiar**
-*Como* familiar y adulto mayor, *quiero* actualizar mis datos de contacto y ver quiénes más forman parte de la red familiar autorizada, *para* mantener la información al día.
-```gherkin
-Given un usuario en la sección de configuración de su perfil
-When edita su número de contacto o revisa la lista de familiares autorizados
-Then los cambios se guardan y son visibles para el resto de la red familiar
-```
-
-**US-25 · Modo de uso extremadamente simple**
-*Como* familiar y adulto mayor, *quiero* un modo de uso extremadamente simple (botones grandes, pocos pasos), *para* poder usarlo sin depender siempre de ayuda.
-```gherkin
-Given un adulto mayor operando la aplicación por sí mismo
-When accede a cualquier función principal
-Then la completa en un máximo de dos pasos, con botones de tamaño ampliado y texto mínimo
-```
-
-**US-26 · Pedir ayuda rápido en una urgencia**
-*Como* familiar y adulto mayor, *quiero* poder avisar rápido que necesito ayuda sin tener que explicar mucho, *para* pedir asistencia en momentos de urgencia.
-```gherkin
-Given un adulto mayor en una situación de urgencia
-When presiona el botón de ayuda rápida
-Then se notifica de inmediato a su red familiar autorizada sin exigir texto adicional
-```
-
----
-
-### Technical Stories — API RESTful (EP-04)
-
-Las historias técnicas exponen, como endpoints RESTful, la capa **Analizar** del flujo Sentir → Analizar → Actuar. Consolidan las necesidades de datos de ambos segmentos sobre un mismo backend, evitando endpoints duplicados por segmento.
-
-**TS-01 · Ingesta de Telemetría Biométrica**
-`POST /api/v1/events`
-*Como* sistema, *quiero* registrar un evento o Telemetría Biométrica capturada y generar automáticamente una alerta cuando el valor esté fuera de rango, *para* iniciar el flujo de atención sin depender de revisión manual.
-```gherkin
-Given un payload JSON con datos de un evento o signo vital de un paciente o adulto mayor
-When el endpoint POST /api/v1/events recibe la solicitud
-Then persiste el evento y, si el valor se desvía de su Línea Base de Signos Vitales, crea automáticamente una alerta con un nivel de prioridad asignado
-```
-
-**TS-02 · Listado de alertas**
-`GET /api/v1/alerts`
-*Como* sistema, *quiero* exponer un listado de alertas filtrable por estado y prioridad, *para* alimentar el dashboard médico y familiar.
-```gherkin
-Given alertas existentes con distintos estados y prioridades
-When se solicita GET /api/v1/alerts con filtros de estado y/o prioridad
-Then la respuesta retorna únicamente las alertas que cumplen los filtros, ordenadas por prioridad
-```
-
-**TS-03 · Historial Clínico Digital de paciente o adulto mayor**
-`GET /api/v1/patients/{id}/history`
-*Como* sistema, *quiero* almacenar y exponer el Historial Clínico Digital de un paciente (registros, alertas, acciones), *para* permitir consultas posteriores desde el frontend médico y familiar.
-```gherkin
-Given un paciente con eventos, alertas y acciones registradas
-When se solicita GET /api/v1/patients/{id}/history
-Then la respuesta retorna el historial completo ordenado cronológicamente
-```
-
-**TS-04 · Transición de estado de una alerta**
-`PATCH /api/v1/alerts/{id}`
-*Como* sistema, *quiero* cambiar el estado de una alerta (pendiente/en revisión/atendida/cerrada) sin eliminarla, registrando quién la atendió y cuándo, *para* conservar el historial completo y mantener trazabilidad.
-```gherkin
-Given una alerta en estado "pendiente"
-When se solicita PATCH /api/v1/alerts/{id} con un nuevo estado válido
-Then el estado se actualiza, se registra el usuario y la fecha del cambio, y el registro original se conserva
-```
-
-**TS-05 · Observaciones sobre una alerta**
-`POST /api/v1/alerts/{id}/notes`
-*Como* sistema, *quiero* registrar observaciones breves asociadas a una alerta, *para* dejar trazabilidad de lo ocurrido durante su atención.
-```gherkin
-Given una alerta existente
-When se solicita POST /api/v1/alerts/{id}/notes con un texto de observación
-Then la observación se asocia a la alerta y queda disponible en el historial del paciente
-```
-
-**TS-06 · Asociación paciente–proveedor de salud**
-`POST /api/v1/patients/{id}/provider`
-*Como* sistema, *quiero* asociar a cada paciente un proveedor de salud (si existe), *para* vincular la información clínica correspondiente.
-```gherkin
-Given un paciente sin proveedor de salud asociado
-When se solicita POST /api/v1/patients/{id}/provider con el ID de un proveedor válido
-Then el paciente queda vinculado a ese proveedor para futuras consultas y notificaciones
-```
-
-**TS-07 · Validación de datos mínimos**
-`POST /api/v1/patients`
-*Como* sistema, *quiero* validar que los datos básicos de un paciente estén completos antes de activar su seguimiento, *para* asegurar información mínima confiable.
-```gherkin
-Given una solicitud de registro de un nuevo paciente
-When falta un dato obligatorio (ej. fecha de nacimiento o contacto de emergencia)
-Then el endpoint rechaza la creación y responde con el listado de campos faltantes
-```
-
-**TS-08 · Red familiar con roles**
-`POST /api/v1/elders/{id}/caregivers`
-*Como* sistema, *quiero* permitir múltiples familiares autorizados por adulto mayor con roles diferenciados (principal/secundario), *para* reflejar cómo se distribuyen realmente las responsabilidades de cuidado.
-```gherkin
-Given un adulto mayor con un familiar principal ya registrado
-When se solicita POST /api/v1/elders/{id}/caregivers con un nuevo familiar y rol "secundario"
-Then el nuevo familiar queda autorizado con permisos correspondientes a su rol, sin reemplazar al familiar principal
-```
-
-**TS-09 · Registro en modo asistido**
-`POST /api/v1/events` (variante con `capturedBy`)
-*Como* sistema, *quiero* registrar un modo "asistido" donde un cuidador ingresa datos en nombre del adulto mayor, *para* cubrir los casos donde el usuario final no puede operar la tecnología directamente.
-```gherkin
-Given un cuidador autorizado en modo asistido
-When registra un evento indicando el campo capturedBy=caregiver
-Then el evento se guarda distinguiendo que el origen del dato fue el cuidador y no el propio adulto mayor
-```
-
-**TS-10 · Notificaciones diferenciadas por rol**
-`POST /api/v1/notifications`
-*Como* sistema, *quiero* enviar notificaciones diferenciadas según el destinatario (familiar vs. médico), *para* que cada uno reciba solo la información relevante a su rol.
-```gherkin
-Given una alerta recién creada
-When el servicio de notificaciones procesa los destinatarios asociados
-Then el familiar recibe un mensaje orientado a la acción inmediata y el médico recibe el detalle clínico correspondiente
-```
-
-**TS-11 · Control de acceso a datos de salud (RBAC)**
-`GET /api/v1/patients/{id}/access-log`
-*Como* sistema, *quiero* registrar el nivel de acceso de cada usuario a los datos de salud del adulto mayor, *para* cumplir con las expectativas de privacidad expresadas por los entrevistados.
-```gherkin
-Given un usuario con rol "familiar secundario" que consulta datos de salud
-When el sistema autoriza o deniega el acceso según su rol
-Then la decisión y el usuario quedan registrados en el access-log del paciente
-```
+| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+|---|---|---|---|---|
+| EP-01 | Captación y Confianza (Landing Page) | Comunicar la propuesta de valor de VitaLink a ambos segmentos y convertir visitantes en usuarios registrados. | — | — |
+| US-01 | Entender la propuesta de valor en segundos | Como visitante del segmento profesionales de salud, quiero entender en segundos qué problema resuelve VitaLink, para decidir si me interesa conocer más. | **Given** un visitante del segmento profesionales de salud ingresa por primera vez al sitio<br>**When** revisa el contenido inicial<br>**Then** identifica el problema que resuelve VitaLink sin necesidad de desplazamiento adicional | EP-01 |
+| US-02 | Confiar antes de registrar datos de pacientes | Como visitante del segmento profesionales de salud, quiero conocer las medidas de privacidad y seguridad de datos, para confiar en registrar información de mis pacientes. | **Given** un visitante del segmento profesionales de salud<br>**When** revisa el contenido de seguridad de la plataforma<br>**Then** encuentra referencias explícitas a cifrado, cumplimiento normativo y control de acceso a los datos | EP-01 |
+| US-03 | Solicitar información antes de registrarse | Como visitante del segmento profesionales de salud, quiero solicitar información antes de registrarme, para evaluar la herramienta sin compromiso. | **Given** un visitante del segmento profesionales de salud interesado pero no convencido<br>**When** solicita información de contacto<br>**Then** el sistema registra la solicitud sin exigir la creación de una cuenta | EP-01 |
+| US-04 | Unirme como proveedor de salud | Como visitante del segmento profesionales de salud, quiero iniciar mi registro como proveedor, para afiliarme a la red de VitaLink. | **Given** un visitante del segmento profesionales de salud decidido a afiliarse<br>**When** inicia el registro como proveedor<br>**Then** el sistema lo dirige a un flujo de registro diferenciado del registro de familiares | EP-01 |
+| US-05 | Ver un ejemplo de cómo funciona una alerta | Como visitante del segmento profesionales de salud, quiero conocer un ejemplo de cómo se comunica una alerta, para entender el funcionamiento del seguimiento antes de registrarme. | **Given** un visitante del segmento profesionales de salud<br>**When** revisa el contenido sobre el funcionamiento de las alertas<br>**Then** identifica el nivel de urgencia, el paciente asociado y la acción disponible sin documentación adicional | EP-01 |
+| US-06 | Entender el beneficio sin llamadas constantes | Como visitante del segmento familiares, quiero entender en segundos cómo la plataforma me informa del estado de mi familiar sin llamarlo constantemente, para decidir si me interesa registrarme. | **Given** un visitante del segmento familiares ingresa por primera vez al sitio<br>**When** revisa el contenido inicial<br>**Then** identifica el beneficio de monitoreo remoto sin depender de llamadas frecuentes | EP-01 |
+| US-07 | Confiar en quién ve los datos de salud | Como visitante del segmento familiares, quiero conocer quién puede ver los datos de salud de mi familiar, para confiar en registrar su información. | **Given** un visitante del segmento familiares evaluando registrar a su adulto mayor<br>**When** revisa el contenido de privacidad<br>**Then** encuentra una explicación de qué roles acceden a qué datos | EP-01 |
+| US-08 | Conocer cómo funciona antes de crear cuenta | Como visitante del segmento familiares, quiero conocer cómo funciona la plataforma antes de crear una cuenta, para entender el proceso sin comprometerme aún. | **Given** un visitante del segmento familiares indeciso sobre registrarse<br>**When** revisa el contenido explicativo del funcionamiento<br>**Then** accede a la explicación del flujo Sentir → Analizar → Actuar sin que se le solicite ningún dato personal | EP-01 |
+| US-09 | Entender la plataforma sin tecnicismos | Como visitante del segmento adultos mayores, quiero entender en lenguaje simple qué hace la plataforma, para saber rápido si me sirve. | **Given** un visitante del segmento adultos mayores con baja familiaridad tecnológica<br>**When** revisa el mensaje principal del sitio<br>**Then** el contenido evita jerga médica o técnica y comunica el beneficio en una sola idea | EP-01 |
+| US-10 | Ver qué esperar antes de registrarse | Como visitante, quiero ver una representación de una alerta o del panel de control, para saber qué esperar antes de registrarme. | **Given** un visitante del segmento familiares<br>**When** revisa el contenido que ilustra el panel de control<br>**Then** visualiza una representación del panel familiar antes de crear una cuenta | EP-01 |
+| EP-02 | Monitoreo Clínico y Gestión de Alertas | Dar a los profesionales de salud una vista operativa de sus pacientes y del ciclo de vida de cada alerta. | — | — |
+| US-11 | Resumen inicial de alertas pendientes | Como médico, quiero un resumen con la cantidad de pacientes con alertas pendientes, para priorizar mi atención al iniciar el día. | **Given** un médico con sesión iniciada<br>**When** accede al panel principal<br>**Then** el sistema presenta la cantidad de alertas pendientes agrupadas por nivel de urgencia | EP-02 |
+| US-12 | Nivel de urgencia diferenciado | Como médico, quiero identificar el nivel de urgencia de cada alerta, para decidir rápido cuál revisar primero. | **Given** una lista de alertas del médico<br>**When** revisa cada alerta<br>**Then** cada una indica su nivel de urgencia sin requerir abrir el detalle | EP-02 |
+| US-13 | Acceder al detalle de un paciente | Como médico, quiero acceder al detalle de un paciente desde una alerta, para revisar su contexto sin buscarlo por separado. | **Given** una alerta asociada a un paciente<br>**When** el médico selecciona esa alerta<br>**Then** el sistema presenta el detalle del paciente asociado | EP-02 |
+| US-14 | Historial ordenado por fecha | Como médico, quiero consultar el historial de un paciente ordenado por fecha, para entender su evolución. | **Given** el detalle de un paciente con registros previos<br>**When** el médico consulta su historial<br>**Then** los registros se presentan en orden cronológico descendente | EP-02 |
+| US-15 | Marcar una alerta como revisada o atendida | Como médico, quiero cambiar el estado de una alerta a "en revisión" o "atendida", para que el equipo conozca el estado del caso. | **Given** una alerta en estado pendiente<br>**When** el médico marca la alerta como "en revisión" o "atendida"<br>**Then** el sistema actualiza el estado de forma visible para los usuarios con acceso, conservando el registro original | EP-02 |
+| US-16 | Agregar una observación a una alerta | Como médico, quiero registrar una observación breve al atender una alerta, para dejar constancia de lo ocurrido. | **Given** una alerta que el médico acaba de atender<br>**When** registra una observación<br>**Then** la observación queda asociada a la alerta y disponible en el historial del paciente | EP-02 |
+| US-17 | Evitar revisiones duplicadas | Como médico, quiero saber si un caso ya fue revisado por otra persona, para evitar duplicar esfuerzos. | **Given** una alerta ya marcada "en revisión" por otro profesional<br>**When** el médico accede a esa alerta<br>**Then** el sistema indica quién la está revisando y desde cuándo | EP-02 |
+| EP-03 | Acompañamiento Familiar y Autocuidado | Permitir que familiares y adultos mayores sigan el estado de salud y actúen ante una alerta. | — | — |
+| US-18 | Estado general al abrir la app | Como familiar y adulto mayor, quiero ver un estado general simple al abrir la aplicación, para saber de inmediato si debo actuar. | **Given** un usuario familiar o adulto mayor con sesión iniciada<br>**When** abre la aplicación<br>**Then** el sistema presenta un indicador de estado general sin requerir interpretar datos crudos | EP-03 |
+| US-19 | Recibir una alerta comprensible | Como familiar y adulto mayor, quiero recibir una alerta que indique qué ocurrió, su gravedad y si ya está siendo atendida, para decidir si debo intervenir. | **Given** un evento fuera de la línea base de un adulto mayor<br>**When** el sistema genera la alerta correspondiente<br>**Then** el destinatario recibe la causa, el nivel de gravedad y el estado de atención actual | EP-03 |
+| US-20 | Confirmar atención con una acción simple | Como familiar y adulto mayor, quiero confirmar que ya atendí una situación, para que el resto de la familia sepa que el caso está cubierto. | **Given** una alerta activa<br>**When** el usuario confirma la atención<br>**Then** el sistema marca la alerta como atendida por esa persona, visible para el resto de la red familiar autorizada | EP-03 |
+| US-21 | Historial simple sin preguntar directamente | Como familiar y adulto mayor, quiero consultar un historial simplificado de días anteriores, para revisar el bienestar de mi familiar sin preguntarle directamente. | **Given** un usuario en la vista de historial<br>**When** selecciona un rango de días anteriores<br>**Then** el sistema presenta un resumen simplificado del estado diario | EP-03 |
+| US-22 | Ver el dato que originó una alerta | Como familiar y adulto mayor, quiero conocer el dato específico que originó una alerta, para entender la gravedad real. | **Given** una alerta abierta por el usuario<br>**When** consulta su detalle<br>**Then** el sistema muestra el valor medido, el rango esperado y la desviación detectada | EP-03 |
+| US-23 | Evitar duplicar esfuerzos entre familiares | Como familiar y adulto mayor, quiero saber si otro familiar ya revisó o atendió una alerta, para no duplicar esfuerzos. | **Given** una alerta ya atendida por otro familiar autorizado<br>**When** otro familiar la consulta<br>**Then** el sistema indica quién la atendió y en qué momento | EP-03 |
+| US-24 | Mantener actualizada la red familiar | Como familiar y adulto mayor, quiero actualizar mis datos de contacto y consultar la red familiar autorizada, para mantener la información al día. | **Given** un usuario en la configuración de su perfil<br>**When** actualiza su información de contacto o consulta la red familiar<br>**Then** el sistema guarda los cambios y los refleja para el resto de la red autorizada | EP-03 |
+| US-25 | Modo de uso extremadamente simple | Como familiar y adulto mayor, quiero operar la aplicación con el mínimo de pasos posible, para usarla sin depender siempre de ayuda. | **Given** un adulto mayor operando la aplicación por sí mismo<br>**When** accede a una función principal<br>**Then** la completa en un máximo de dos pasos | EP-03 |
+| US-26 | Pedir ayuda rápido en una urgencia | Como familiar y adulto mayor, quiero solicitar ayuda de forma inmediata sin explicaciones extensas, para pedir asistencia en una urgencia. | **Given** un adulto mayor en una situación de urgencia<br>**When** solicita ayuda inmediata<br>**Then** el sistema notifica de inmediato a la red familiar autorizada sin exigir información adicional | EP-03 |
+| EP-04 | Plataforma de Datos y Alertas (API) | Sostener con datos confiables y trazables el flujo Sentir → Analizar → Actuar entre wearables, backend e IA. | — | — |
+| TS-01 | Ingesta de Telemetría Biométrica | Como Developer, quiero un endpoint que reciba Telemetría Biométrica y genere una alerta automáticamente cuando el valor se desvíe de su Línea Base de Signos Vitales, para iniciar el flujo de atención sin revisión manual. | **Given** un payload válido con Telemetría Biométrica<br>**When** se envía POST /api/v1/events<br>**Then** el sistema responde 201 y persiste el evento<br><br>**Given** un valor fuera de la Línea Base de Signos Vitales<br>**When** el evento se procesa<br>**Then** el sistema crea automáticamente una alerta con prioridad asignada | EP-04 |
+| TS-02 | Listado de alertas | Como Developer, quiero un endpoint que liste alertas filtrables por estado y prioridad, para alimentar el panel médico y familiar. | **Given** alertas existentes con distintos estados y prioridades<br>**When** se envía GET /api/v1/alerts con filtros<br>**Then** el sistema responde 200 con únicamente las alertas que cumplen los filtros, ordenadas por prioridad | EP-04 |
+| TS-03 | Historial Clínico Digital | Como Developer, quiero un endpoint que exponga el Historial Clínico Digital de un paciente, para permitir su consulta desde el frontend médico y familiar. | **Given** un paciente con eventos y alertas registrados<br>**When** se envía GET /api/v1/patients/{id}/history<br>**Then** el sistema responde 200 con el historial ordenado cronológicamente | EP-04 |
+| TS-04 | Transición de estado de una alerta | Como Developer, quiero un endpoint que cambie el estado de una alerta sin eliminarla y registre quién hizo el cambio, para mantener trazabilidad completa. | **Given** una alerta en estado pendiente<br>**When** se envía PATCH /api/v1/alerts/{id} con un estado válido<br>**Then** el sistema responde 200, actualiza el estado y conserva el registro original<br><br>**Given** un estado no válido<br>**When** se envía la misma solicitud<br>**Then** el sistema responde 400 y no modifica la alerta | EP-04 |
+| TS-05 | Observaciones sobre una alerta | Como Developer, quiero un endpoint que registre observaciones asociadas a una alerta, para dejar trazabilidad de su atención. | **Given** una alerta existente<br>**When** se envía POST /api/v1/alerts/{id}/notes con un texto válido<br>**Then** el sistema responde 201 y asocia la observación a la alerta | EP-04 |
+| TS-06 | Asociación paciente–proveedor de salud | Como Developer, quiero un endpoint que asocie un paciente a un proveedor de salud, para vincular la información clínica correspondiente. | **Given** un paciente sin proveedor asociado<br>**When** se envía POST /api/v1/patients/{id}/provider con un proveedor válido<br>**Then** el sistema responde 200 y vincula al paciente con ese proveedor | EP-04 |
+| TS-07 | Validación de datos mínimos | Como Developer, quiero que el endpoint de registro de pacientes valide los datos mínimos requeridos, para asegurar información confiable antes de activar el seguimiento. | **Given** una solicitud sin un dato obligatorio<br>**When** se envía POST /api/v1/patients<br>**Then** el sistema responde 400 con el listado de campos faltantes<br><br>**Given** una solicitud con todos los datos obligatorios<br>**When** se envía la misma solicitud<br>**Then** el sistema responde 201 y activa el seguimiento del paciente | EP-04 |
+| TS-08 | Red familiar con roles | Como Developer, quiero un endpoint que registre múltiples familiares autorizados por adulto mayor con un rol diferenciado, para reflejar cómo se distribuyen las responsabilidades de cuidado. | **Given** un adulto mayor con un familiar principal registrado<br>**When** se envía POST /api/v1/elders/{id}/caregivers con un nuevo familiar y rol secundario<br>**Then** el sistema responde 201 y autoriza al nuevo familiar sin reemplazar al principal | EP-04 |
+| TS-09 | Registro en modo asistido | Como Developer, quiero que el endpoint de eventos acepte un origen de captura distinto al del propio adulto mayor, para cubrir los casos donde un cuidador ingresa los datos en su nombre. | **Given** un cuidador autorizado en modo asistido<br>**When** registra un evento indicando el origen del dato como cuidador<br>**Then** el sistema persiste el evento distinguiendo su origen | EP-04 |
+| TS-10 | Notificaciones diferenciadas por rol | Como Developer, quiero un servicio que envíe notificaciones distintas según el rol del destinatario, para que cada uno reciba solo la información relevante. | **Given** una alerta recién creada con destinatarios asociados<br>**When** el servicio de notificaciones procesa la alerta<br>**Then** cada destinatario recibe un contenido ajustado a su rol | EP-04 |
+| TS-11 | Control de acceso a datos de salud (RBAC) | Como Developer, quiero un endpoint que registre el nivel de acceso de cada usuario a los datos de salud de un paciente, para cumplir con las expectativas de privacidad expresadas por los entrevistados. | **Given** un usuario que consulta datos de salud de un paciente<br>**When** el sistema evalúa su rol<br>**Then** autoriza o deniega el acceso y registra la decisión en el access-log del paciente | EP-04 |
