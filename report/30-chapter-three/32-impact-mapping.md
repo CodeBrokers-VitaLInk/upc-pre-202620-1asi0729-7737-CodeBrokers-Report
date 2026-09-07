@@ -4,6 +4,9 @@ El Impact Mapping de VitaLink parte de los objetivos de negocio del piloto (**WH
 
 > **Nota de consistencia:** las tres personas descritas en esta sección se basan en los hallazgos de las entrevistas ya registradas y quedan disponibles para reutilizarse en [2.3.1. User Personas](../20-chapter-two/23-needfinding.md) cuando esa sección se complete, evitando definir personas contradictorias entre capítulos.
 
+**Herramienta:** UXPressia
+**URL pública del Impact Map:** `[completar]`
+
 ### User Personas (WHO)
 
 **Persona 1 — Dra. Jimena, Profesional de Salud**

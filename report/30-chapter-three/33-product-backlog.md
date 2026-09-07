@@ -48,7 +48,7 @@ El orden del Product Backlog responde al valor de negocio, no a la conveniencia 
 
 ### 3.3.2. Tablero público del Backlog
 
-**Herramienta:** `[completar — cuál indica el statement]`
+**Herramienta:** `[completar — Trello / Jira / YouTrack / Pivotal Tracker]`
 **URL pública:** `[completar]`
 
 <!-- \includegraphics[width=0.9\linewidth]{assets/product-backlog.png} -->
