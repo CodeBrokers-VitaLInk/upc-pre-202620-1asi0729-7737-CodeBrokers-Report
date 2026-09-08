@@ -1,243 +1,208 @@
 ## 4.2. Information Architecture
 
+Esta sección define cómo se organiza, se nombra, se busca y se recorre el contenido en los dos productos digitales de VitaLink: el Landing Page (sitio web estático) y las Web Applications. Las decisiones buscan que visitantes y usuarios se adapten con facilidad a cada producto y encuentren lo que necesitan sin esfuerzo, y son coherentes con los tokens y componentes definidos en 4.1.
+
 ### 4.2.1. Organization Systems
 
-VitaLink implementa sistemas de organización visual cuidadosamente seleccionados para estructurar el contenido de su landing page y facilitar la navegación de los usuarios:
+VitaLink combina sistemas de organización visual y esquemas de categorización seleccionados según el tipo de contenido de cada bloque.
 
-### Organización Jerárquica (Visual Hierarchy)
-Se aplica en toda la estructura de la landing page para establecer diferentes niveles de importancia y guiar la atención del usuario:
-* **Nivel 1:** Header y navegación principal, donde se presentan el logotipo de VitaLink, las secciones principales y los botones de acción.
-* **Nivel 2:** Títulos y mensajes principales de cada sección, como “Flujo clínico integrado”, “Protocolo de Alerta Inteligente” y “Seguridad de grado médico”.
-* **Nivel 3:** Descripciones, características, beneficios y elementos secundarios que complementan la información principal.
+#### Organización jerárquica (visual hierarchy)
 
-La jerarquía se refuerza mediante tamaños tipográficos, peso de la fuente, colores, contraste, espaciado y posición de los elementos, permitiendo que el usuario identifique rápidamente la información más relevante.
+Se aplica en toda la estructura del Landing Page para establecer niveles de importancia y guiar la atención:
 
-### Organización Secuencial (Step-by-Step)
-Se utiliza principalmente en la sección “Flujo clínico integrado”, donde se presenta de manera progresiva el funcionamiento que VitaLink comunica a sus usuarios:
-* **Captura Continua:** Representa la recopilación de información.
-* **Análisis Algorítmico:** Representa el procesamiento de los datos.
-* **Alertas Integradas:** Representa la comunicación de posibles situaciones de riesgo.
+- **Nivel 1:** header y navegación principal, con el logotipo, las secciones y la acción principal.
+- **Nivel 2:** títulos y mensajes principales de cada sección, como "Flujo clínico integrado", "Protocolo de alerta inteligente" y "Seguridad de grado médico".
+- **Nivel 3:** descripciones, características, beneficios y elementos secundarios que complementan la información principal.
 
-Las tres etapas se presentan de forma consecutiva y conectadas visualmente, permitiendo comprender el concepto de funcionamiento de VitaLink sin necesidad de navegar a otra página.
+La jerarquía se refuerza con tamaño tipográfico, peso, color, contraste, espaciado y posición, según la escala definida en 4.1.1. Los elementos de mayor importancia se ubican arriba y hacia el inicio de la línea de lectura, que es el orden en que se recorre la página.
 
-### Organización por Secciones
-La landing page divide la información en bloques claramente diferenciados, permitiendo presentar cada aspecto del producto de forma independiente:
-* **Hero:** Presenta la propuesta de valor principal de VitaLink y las acciones principales.
-* **Flujo clínico integrado:** Explica visualmente cómo funciona el sistema.
-* **Protocolo de Alerta Inteligente:** Comunica las principales características relacionadas con las alertas.
-* **Seguridad de grado médico:** Presenta los elementos relacionados con seguridad y cumplimiento.
-* **Unirme como proveedor de salud:** Funciona como llamada a la acción final.
-* **Footer:** Agrupa información institucional, legal, contacto y enlaces adicionales.
+#### Organización secuencial (step-by-step)
 
-### Categorización por Tópicos
-La información de la landing se agrupa según diferentes temas relacionados con la propuesta de VitaLink:
-* **Beneficios y propuesta de valor:** Información orientada a explicar las ventajas de VitaLink.
-* **Funcionamiento:** Contenido relacionado con la captura, análisis y generación de alertas.
-* **Seguridad:** Información sobre cifrado, cumplimiento normativo y control de acceso.
-* **Servicios para profesionales:** Beneficios y herramientas disponibles para proveedores de salud.
-* **Información complementaria:** Preguntas frecuentes, contacto y aspectos legales.
+Se utiliza en la sección "Flujo clínico integrado", donde el funcionamiento se presenta como una progresión de tres etapas:
 
-Esta categorización permite que el usuario pueda identificar rápidamente el tema de cada sección y comprender la propuesta de valor de la plataforma.
+- **Captura continua:** recopilación de información desde el sensor o la aplicación del adulto mayor.
+- **Análisis algorítmico:** procesamiento de los datos y detección de valores fuera de rango.
+- **Alertas integradas:** comunicación priorizada de la situación al familiar y al profesional de salud.
 
-### Categorización por Audiencia
-La landing contempla diferentes perfiles de usuario mediante elementos de navegación y llamadas a la acción:
-* **Profesionales de la salud:** Cuentan con contenido orientado al monitoreo clínico, las alertas y la incorporación como proveedor.
-* **Pacientes:** Disponen de una vista diferenciada mediante el selector de tipo de usuario presente en el header.
-* **Familiares:** Se relacionan principalmente con la propuesta de acompañamiento y monitoreo preventivo presentada por VitaLink.
+Las tres etapas se presentan consecutivas y conectadas visualmente. Cada etapa tiene su propio ícono, distinto de los demás, y su propio título: el orden y la diferenciación son justamente lo que comunica que se trata de un proceso y no de tres características sueltas.
 
-La combinación de estos sistemas de organización permite que la landing page presente una estructura clara y coherente, guiando al usuario desde la propuesta de valor inicial hasta la información específica y las llamadas a la acción, manteniendo una experiencia consistente entre las diferentes vistas de la misma landing page.
+#### Organización por secciones
+
+El Landing Page divide la información en bloques diferenciados, presentados en este orden:
+
+| Orden | Sección | Propósito |
+|---|---|---|
+| 1 | Hero | Propuesta de valor principal y acciones principales |
+| 2 | Flujo clínico integrado | Explicar cómo funciona el sistema |
+| 3 | Protocolo de alerta inteligente | Comunicar el comportamiento de las alertas |
+| 4 | Planes | Presentar los niveles de servicio y su precio |
+| 5 | Seguridad de grado médico | Cumplimiento normativo y protección de datos |
+| 6 | Llamada a la acción final | Conversión hacia registro o solicitud de información |
+| 7 | Footer | Información institucional, legal, contacto y enlaces |
+
+#### Categorización por tópicos
+
+La información se agrupa según temas: beneficios y propuesta de valor, funcionamiento, seguridad, servicios para profesionales e información complementaria. Esta categorización permite identificar rápidamente el tema de cada sección.
+
+#### Categorización por audiencia
+
+El Landing Page atiende a dos segmentos mediante un selector de perfil en el header, que conmuta entre la vista **Profesional de salud** y la vista **Familiar**. Ambas vistas conservan el mismo orden de secciones y el mismo sistema de componentes; cambian el contenido, las imágenes y las llamadas a la acción. Mantener la estructura estable entre vistas evita que la persona tenga que reorientarse al cambiar de perfil.
 
 ### 4.2.2. Labeling Systems
 
-El sistema de etiquetado de VitaLink está diseñado para comunicar la propuesta de valor de la landing page de manera clara, directa y fácil de comprender. Las etiquetas utilizan un número reducido de palabras y términos relacionados con el ámbito de la salud y el monitoreo preventivo, buscando facilitar el escaneo visual y reducir la carga cognitiva de los visitantes.
+El sistema de etiquetado comunica la propuesta de valor de forma clara y directa, con un número reducido de palabras y términos reconocibles del ámbito de la salud, para facilitar el escaneo visual y reducir la carga cognitiva.
 
-### Principios de Etiquetado
-* **Concisión:** Se utilizan etiquetas breves y directas, generalmente de una a cuatro palabras, como “Red Médica”, “Seguridad de Datos” o “Flujo clínico integrado”.
-* **Consistencia:** Se mantiene el mismo término para representar un concepto en las diferentes secciones de la landing, evitando utilizar palabras diferentes para una misma idea.
-* **Familiaridad:** Se emplean términos reconocibles para los usuarios del ámbito de la salud, como “Pacientes”, “Profesionales de salud”, “Alertas” y “Seguridad”.
-* **Claridad:** Las etiquetas buscan expresar directamente el contenido o la acción asociada, evitando términos técnicos innecesarios para los visitantes de la landing page.
+#### Principios de etiquetado
 
-### Categorías de Etiquetas
+- **Concisión:** etiquetas de una a tres palabras.
+- **Consistencia:** un concepto se nombra siempre igual, en las dos vistas y en los dos productos. Una etiqueta que cambia de nombre entre pantallas obliga a reaprender la interfaz.
+- **Familiaridad:** términos reconocibles para cada segmento; el vocabulario clínico se reserva para la vista Profesional.
+- **Claridad:** la etiqueta describe el contenido o la acción, sin recurrir a nombres creativos que no se entiendan fuera del equipo.
+- **Sentence case:** todas las etiquetas de interfaz se escriben en sentence case, sin mayúsculas sostenidas.
 
-#### Etiquetas de Navegación
-El menú principal utiliza etiquetas breves que permiten identificar rápidamente las diferentes áreas de información de la landing page:
-* “Ventajas Clínicas”
-* “Seguridad de Datos”
-* “Red Médica”
+#### Etiquetas de navegación
 
-Estas etiquetas permiten al visitante reconocer el contenido de cada sección antes de acceder a ella.
+El menú principal utiliza cuatro etiquetas por vista, tres de ellas compartidas, con anclas estables:
 
-### Etiquetas para Identificación de Audiencia
-La landing incorpora etiquetas para diferenciar los tipos de usuarios a los que está dirigida la propuesta:
-* “Profesionales de salud”
-* “Pacientes”
-* “Para Profesionales de la Salud”
+| Vista Profesional | Vista Familiar | Ancla |
+|---|---|---|
+| Cómo funciona | Cómo funciona | `#como-funciona` |
+| Alertas | Alertas | `#alertas` |
+| Planes | Planes | `#planes` |
+| Seguridad | Familias | `#seguridad` / `#familias` |
 
-Estas etiquetas permiten orientar rápidamente al visitante hacia la perspectiva que corresponde a su perfil.
+Estas etiquetas son las que se implementan en el header, en las anclas internas y en los diseños de la sección 4.3, de modo que la documentación, el prototipo y la implementación nombren las mismas cosas del mismo modo.
 
-### Etiquetas para Secciones Informativas
-Las principales secciones utilizan nombres descriptivos que resumen su contenido:
-* “Flujo clínico integrado”
-* “Protocolo de Alerta Inteligente”
-* “Seguridad de grado médico”
-* “Cumplimiento normativo total”
+#### Etiquetas de identificación de audiencia
 
-Estas etiquetas funcionan como encabezados y permiten identificar rápidamente el propósito de cada bloque de información.
+El selector de perfil utiliza "Profesionales de salud" y "Familias". Ambas opciones se anuncian con `aria-selected` además de diferenciarse por color, para que el estado activo no dependa únicamente de la apariencia.
 
-### Etiquetas para Características y Beneficios
-En las secciones de contenido se utilizan etiquetas concretas para destacar las principales características comunicadas por VitaLink:
-* “Captura Continua”
-* “Análisis Algorítmico”
-* “Alertas Integradas”
-* “Cero Falsos Positivos”
-* “Escalamiento Multicanal”
-* “Contexto Histórico”
-* “Cifrado E2E”
-* “HIPAA & GDPR”
-* “Control de Acceso (RBAC)”
+#### Etiquetas de secciones informativas
 
-Estas etiquetas permiten identificar rápidamente cada beneficio o característica sin necesidad de leer inicialmente las descripciones completas.
+"Flujo clínico integrado", "Protocolo de alerta inteligente", "Seguridad de grado médico" y "Cumplimiento normativo". Funcionan como encabezados de bloque y permiten identificar el propósito de cada sección.
 
-### Etiquetas de Acción (Call-to-Action)
-Las acciones principales utilizan etiquetas orientadas directamente a la intención del usuario:
-* “Unirme como proveedor”
-* “Solicitar información técnica”
-* “Crear cuenta institucional”
+#### Etiquetas de características y beneficios
 
-Estas etiquetas indican de manera explícita qué acción puede realizar el visitante y funcionan como puntos de conversión dentro de la landing page.
+"Captura continua", "Análisis algorítmico", "Alertas integradas", "Priorización por gravedad", "Escalamiento multicanal", "Contexto histórico", "Cifrado de extremo a extremo", "HIPAA y GDPR" y "Control de acceso por roles".
 
-### Etiquetas para Información Institucional
-En el footer se utilizan etiquetas simples para agrupar información complementaria:
-* “Legal”
-* “Contacto”
-* “Síguenos”
-* “Privacidad”
-* “Términos de Servicio”
+Las etiquetas no prometen resultados que el producto no puede garantizar. En particular, no se utilizan formulaciones como "cero falsos positivos": en un producto de salud, una promesa absoluta sobre la detección compromete la credibilidad de toda la propuesta y no puede sustentarse ante una audiencia clínica.
 
-Esta organización permite localizar rápidamente información secundaria sin competir visualmente con las llamadas a la acción principales.
+#### Etiquetas de acción
 
-### Asociaciones entre Etiquetas
-Las etiquetas se relacionan mediante diferentes recursos visuales y estructurales:
-* **Jerarquía tipográfica:** Los títulos de sección presentan mayor tamaño y peso que las etiquetas secundarias.
-* **Agrupación visual:** Las etiquetas relacionadas se colocan dentro de una misma sección o tarjeta para facilitar su asociación.
-* **Iconografía complementaria:** Los iconos ayudan a reforzar visualmente el significado de etiquetas como “Cifrado E2E”, “Control de Acceso”, “Alertas Integradas” y otras características.
-* **Color:** Se utiliza principalmente el color verde de VitaLink para destacar acciones y conceptos importantes, mientras que otros colores se emplean para diferenciar información secundaria o estados de alerta.
-* **Posición y espaciado:** Las etiquetas se organizan mediante espacios y agrupaciones consistentes para establecer relaciones entre títulos, descripciones, iconos y botones.
+"Unirme como proveedor", "Solicitar información", "Crear cuenta" y "Conocer cómo funciona". Cada una empieza con un verbo y describe el resultado de la acción.
 
-Este sistema de etiquetado permite que los visitantes de la landing page comprendan rápidamente la propuesta de VitaLink, identifiquen las principales características del servicio y reconozcan las acciones disponibles, manteniendo una comunicación visual consistente entre las diferentes vistas de la landing page.
+#### Etiquetas institucionales
+
+En el footer: "Legal", "Contacto", "Privacidad" y "Términos del servicio". El enlace a términos y condiciones y a la política de privacidad está presente en el footer del Landing Page y en el de las aplicaciones.
+
+#### Asociaciones entre etiquetas
+
+Las etiquetas se relacionan mediante jerarquía tipográfica, agrupación visual dentro de una misma tarjeta o sección, iconografía complementaria, color de acento y espaciado consistente. El color acompaña la asociación, pero nunca es el único recurso que la comunica.
 
 ### 4.2.3. SEO Tags and Meta Tags
 
-### SEO Tags y Meta Tags
+Los valores se definen según el propósito de cada experiencia: el Landing Page busca posicionamiento y captación; la Web Application, identificación de vistas para usuarios autenticados.
 
-VitaLink implementará una estrategia de SEO y etiquetado web orientada a mejorar la visibilidad del producto en motores de búsqueda y facilitar una correcta identificación de sus contenidos. Los valores de las etiquetas se definirán de acuerdo con el propósito de cada experiencia: **Landing Page (sitio web estático)** y **Web Application**.
-
-### Landing Page (Sitio Web Estático)
-
-La Landing Page tendrá como objetivo presentar VitaLink, comunicar su propuesta de valor y captar principalmente a profesionales e instituciones del sector salud. Por ello, las etiquetas estarán orientadas a conceptos como monitoreo preventivo, seguimiento de pacientes, alertas de salud y tecnología aplicada al ámbito clínico.
-
-### Tags principales
+#### Landing Page
 
 ```html
-<title>VitaLink | Monitoreo Preventivo para Profesionales de la Salud</title>
+<title>VitaLink | Preventive Monitoring for Health Professionals and Families</title>
 
-<meta name="description" content="VitaLink facilita el monitoreo preventivo de pacientes mediante datos continuos, alertas inteligentes y herramientas integradas para profesionales de la salud.">
+<meta name="description" content="VitaLink connects older adults, their families and health professionals through continuous vital-sign monitoring and prioritized alerts.">
 
-<meta name="keywords" content="VitaLink, monitoreo preventivo, monitoreo de pacientes, seguimiento de pacientes, alertas de salud, profesionales de la salud, tecnología médica">
+<meta name="keywords" content="VitaLink, preventive monitoring, patient monitoring, health alerts, older adult care, health professionals">
 
 <meta name="author" content="CodeBrokers">
-```
 
-El `<title>` permitirá identificar claramente el producto y su orientación hacia los profesionales de la salud. La descripción resumirá la propuesta de valor de VitaLink para mejorar su representación en los resultados de búsqueda. Las palabras clave estarán relacionadas directamente con los conceptos utilizados en la Landing Page, evitando incorporar términos que no representen el propósito del producto.
-
-### Tags de viewport y responsividad
-
-```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 ```
 
-Estas etiquetas permitirán que la Landing Page se adapte correctamente a diferentes tamaños de pantalla y dispositivos, manteniendo la experiencia responsiva definida para VitaLink.
-
-### Open Graph y Social Media Tags
-
-Para mejorar la presentación de VitaLink cuando la Landing Page sea compartida en redes sociales o plataformas de mensajería, se considerará la implementación de etiquetas Open Graph:
+El idioma por defecto de los metadatos es inglés, en coherencia con la decisión de i18n de la sección 4.1. La versión en español se sirve mediante `hreflang`:
 
 ```html
-<meta property="og:title" content="VitaLink | Monitoreo Preventivo para Profesionales de la Salud">
+<link rel="alternate" hreflang="en-US" href="https://vitalink.app/">
+<link rel="alternate" hreflang="es-419" href="https://vitalink.app/es/">
+```
 
-<meta property="og:description" content="Monitoreo preventivo, alertas inteligentes y datos continuos para facilitar el seguimiento de pacientes.">
+#### Open Graph y redes sociales
 
+```html
+<meta property="og:title" content="VitaLink | Preventive Monitoring for Health Professionals and Families">
+<meta property="og:description" content="Continuous monitoring and prioritized alerts that keep families and clinicians informed.">
 <meta property="og:image" content="[URL de la imagen oficial de VitaLink]">
-
 <meta property="og:url" content="[URL oficial de VitaLink]">
-
 <meta property="og:type" content="website">
-
 <meta name="twitter:card" content="summary_large_image">
 ```
 
-La imagen utilizada deberá corresponder a un recurso gráfico oficial de VitaLink, manteniendo la identidad visual de la marca.
+#### Estructura semántica del Landing Page
 
-### Optimización de la Estructura de la Landing Page
+- **Jerarquía de encabezados:** un único `h1` para la propuesta de valor y encabezados `h2` y `h3` para secciones y tarjetas, sin saltos de nivel.
+- **Identificadores de sección:** `#como-funciona`, `#alertas`, `#planes`, `#seguridad` y `#familias`, coincidentes con las etiquetas de navegación de 4.2.2.
+- **Atributos `alt` descriptivos:** por ejemplo, `<img alt="Panel clínico de VitaLink con alertas priorizadas por gravedad">`.
+- **Regiones semánticas:** `header`, `nav`, `main`, `section` y `footer`, que además permiten la navegación por lectores de pantalla.
+- **Datos estructurados:** se podrá incorporar Schema.org para representar la organización y el producto cuando la información publicada sea definitiva.
 
-La Landing Page contará con una estructura semántica que facilite tanto la navegación de los usuarios como la interpretación del contenido por parte de los motores de búsqueda.
-
-Se considerará:
-
-- **Jerarquía de encabezados:** utilización de un único `h1` para la propuesta de valor principal y encabezados `h2` y `h3` para organizar las diferentes secciones y contenidos.
-
-- **Identificación semántica de secciones:** cada sección podrá contar con identificadores que faciliten la navegación mediante enlaces internos, por ejemplo `#ventajas-clinicas`, `#seguridad-datos`, `#red-medica` y `#faq`, en concordancia con las secciones de navegación planteadas en la Landing Page.
-
-- **Atributos `alt` descriptivos:** las imágenes deberán contar con textos alternativos relacionados con su contenido. Por ejemplo, para la imagen del dashboard clínico se podrá utilizar:
+#### Web Application
 
 ```html
-<img alt="Dashboard clínico de VitaLink para monitoreo de pacientes">
-```
+<title>VitaLink | Health Monitoring Platform</title>
 
-- **Contenido relevante:** se utilizarán de manera natural términos relacionados con el monitoreo preventivo, alertas inteligentes, pacientes y profesionales de la salud, evitando la repetición excesiva de palabras clave.
-
-- **Datos estructurados:** a futuro se podrá incorporar Schema.org para representar información relevante de VitaLink como producto, organización o servicio, siempre que corresponda con la información definitiva publicada.
-
----
-
-### Web Application
-
-La Web Application tendrá un objetivo diferente a la Landing Page, ya que estará orientada a usuarios autenticados y a la gestión y visualización de información dentro de la plataforma. Por este motivo, sus etiquetas estarán enfocadas en identificar claramente la aplicación y sus diferentes vistas.
-
-### Tags principales
-
-```html
-<title>VitaLink | Plataforma de Monitoreo de Salud</title>
-
-<meta name="description" content="Plataforma VitaLink para el seguimiento preventivo de pacientes, visualización de información de salud y gestión de alertas.">
-
-<meta name="keywords" content="VitaLink, plataforma de salud, monitoreo de pacientes, seguimiento de salud, alertas médicas">
+<meta name="description" content="VitaLink platform for preventive patient follow-up, health data visualization and alert management.">
 
 <meta name="author" content="CodeBrokers">
+
+<meta name="robots" content="noindex, nofollow">
 ```
 
-En la Web Application, el contenido SEO tendrá una función principalmente descriptiva y de identificación, debido a que gran parte de la información estará disponible únicamente para usuarios con acceso a la plataforma.
-
-Para las diferentes vistas de la aplicación se podrán utilizar títulos específicos manteniendo la identidad de VitaLink, por ejemplo:
-
-```html
-<title>Dashboard | VitaLink</title>
-<title>Pacientes | VitaLink</title>
-<title>Alertas | VitaLink</title>
-<title>Perfil | VitaLink</title>
-```
-
-La implementación de estos SEO Tags y Meta Tags permitirá mantener una identificación consistente de VitaLink tanto en su **Landing Page como en su Web Application**, diferenciando el propósito de cada experiencia. La Landing Page estará enfocada principalmente en la presentación del producto, posicionamiento y captación de usuarios, mientras que la Web Application estará orientada al acceso y uso de las funcionalidades de la plataforma.
+Las vistas autenticadas se excluyen de la indexación, ya que su contenido no es público y no aporta valor de posicionamiento. Cada vista define su propio título manteniendo la identidad del producto: `Dashboard | VitaLink`, `Patients | VitaLink`, `Alerts | VitaLink`, `Profile | VitaLink`.
 
 ### 4.2.4. Searching Systems
 
-En el Landing Page no se implementa un sistema de búsqueda, dado que el volumen de contenido es reducido y la navegación secuencial es suficiente para que el visitante encuentre la información que necesita.
+#### Landing Page
+
+El Landing Page no incorpora un buscador. Su contenido cabe en una sola página, está dividido en seis secciones y la navegación por anclas del header permite alcanzar cualquiera de ellas en un clic. Introducir un buscador en un volumen de contenido tan reducido agrega un control que compite con las llamadas a la acción sin resolver ninguna necesidad real.
+
+#### Web Application — vista Profesional
+
+Es la experiencia donde el volumen de información sí justifica un sistema de búsqueda, ya que un profesional puede tener decenas de pacientes bajo seguimiento.
+
+- **Búsqueda global** en la barra superior, disponible desde cualquier vista, que consulta pacientes por nombre y por documento de identidad. Devuelve resultados mientras se escribe, a partir del tercer carácter, agrupados por tipo (pacientes y alertas).
+- **Búsqueda dentro de la lista de pacientes**, combinada con filtros:
+
+| Filtro | Valores | Comportamiento por defecto |
+|---|---|---|
+| Estado de la alerta | Pendiente, en revisión, atendida, cerrada | Pendiente y en revisión |
+| Nivel de gravedad | Alta, media, baja | Todos |
+| Rango de fechas | Hoy, últimos 7 días, últimos 30 días, personalizado | Últimos 7 días |
+| Proveedor asignado | Lista de profesionales del centro | Todos |
+
+- **Presentación de los resultados:** tabla con paginación, ordenable por gravedad y por fecha del último registro. Cada fila muestra el nombre del paciente, el nivel de gravedad como etiqueta con ícono y texto, la fecha del último registro y el estado de la alerta. Los filtros activos se muestran como etiquetas removibles sobre la tabla, de modo que siempre sea evidente por qué el listado está recortado.
+- **Estado vacío:** cuando una búsqueda no arroja resultados se explica el motivo y se ofrece una salida —quitar filtros o ampliar el rango de fechas—, en lugar de mostrar una tabla en blanco.
+
+#### Web Application — vista Familiar
+
+El volumen de información es mucho menor, ya que una familia sigue a uno o pocos adultos mayores. En lugar de un buscador se ofrece un filtro por tipo de evento y por rango de fechas dentro del historial, con las mismas etiquetas de estado que la vista Profesional. Esta decisión responde al perfil del segmento: agregar controles de búsqueda a una experiencia que se usa en momentos de preocupación añade carga cognitiva sin beneficio.
 
 ### 4.2.5. Navigation Systems
 
-El sistema de navegación de **VitaLink** está diseñado para facilitar el acceso a las funcionalidades e información más importantes de la plataforma, considerando las necesidades tanto de familiares y pacientes como de profesionales de la salud.
+#### Landing Page
 
-En el **Landing Page**, la navegación es lineal con un **navbar fijo** en la parte superior que contiene anclas a las secciones principales de la página, enfocadas en explicar cómo funciona el monitoreo, el sistema de alertas, la seguridad de los datos y las preguntas frecuentes. En mobile, el navbar colapsa en un menú hamburguesa.
+Navegación lineal con un header fijo que contiene anclas a las secciones principales. El selector de perfil conmuta entre las vistas Profesional y Familiar conservando la posición de lectura, y las llamadas a la acción de cada vista dirigen a la Web Application correspondiente: la del segmento Profesional inicia el proceso para unirse como proveedor y la del segmento Familiar inicia la creación de cuenta. En móvil, la navegación colapsa en un menú desplegable, mientras el logotipo y la acción principal permanecen visibles.
 
-El selector de perfil permite cambiar entre **Familiares/Pacientes** y **Profesionales de salud**, adaptando el contenido y las acciones principales según el tipo de usuario, pero manteniendo una estructura de navegación unificada. Los **call to action** del Landing Page redirigen al usuario hacia la acción correspondiente: el CTA para familiares o pacientes permite comenzar el proceso de uso de VitaLink, mientras que el CTA para profesionales de salud permite iniciar el proceso para unirse como proveedor.
+Un selector de idioma en el footer permite alternar entre English y Español, según la decisión de i18n de 4.1.
+
+#### Web Applications
+
+| Recurso | Vista Profesional | Vista Familiar |
+|---|---|---|
+| Navegación principal | Barra lateral persistente con Panel, Pacientes, Alertas y Reportes | Barra inferior con Inicio, Alertas, Historial y Perfil |
+| Navegación contextual | Ruta de navegación (breadcrumb) al entrar al detalle de un paciente | Botón de retorno explícito en cada vista de detalle |
+| Navegación de emergencia | Acceso directo a alertas de gravedad alta desde cualquier vista | Botón de aviso rápido presente en la vista de inicio |
+
+Decisiones asociadas:
+
+- La barra lateral se eligió para la vista Profesional porque la persona alterna entre varias áreas durante una misma sesión de trabajo en pantalla amplia; la barra inferior se eligió para la vista Familiar porque concentra cuatro destinos y se usa mayoritariamente en móvil, con el pulgar.
+- La sección activa se indica con color **y** con ícono relleno, además de `aria-current="page"`.
+- Todos los destinos de navegación se alcanzan con teclado, en un orden de tabulación que sigue el orden visual, y con un enlace inicial para saltar directamente al contenido principal.
+- Ninguna acción destructiva —cancelar un seguimiento, eliminar un contacto autorizado— se ejecuta directamente desde la navegación: siempre media una confirmación.
