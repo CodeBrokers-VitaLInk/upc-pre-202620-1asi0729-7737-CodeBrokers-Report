@@ -138,24 +138,20 @@ La Landing Page tendrá como objetivo presentar VitaLink, comunicar su propuesta
 
 ### Tags principales
 
-```html
-<title>VitaLink | Monitoreo Preventivo para Profesionales de la Salud</title>
+Título de la página (etiqueta title): VitaLink | Monitoreo Preventivo para Profesionales de la Salud
 
-<meta name="description" content="VitaLink facilita el monitoreo preventivo de pacientes mediante datos continuos, alertas inteligentes y herramientas integradas para profesionales de la salud.">
+Descripción (meta name="description"): VitaLink facilita el monitoreo preventivo de pacientes mediante datos continuos, alertas inteligentes y herramientas integradas para profesionales de la salud.
 
-<meta name="keywords" content="VitaLink, monitoreo preventivo, monitoreo de pacientes, seguimiento de pacientes, alertas de salud, profesionales de la salud, tecnología médica">
+Palabras clave (meta name="keywords"): VitaLink, monitoreo preventivo, monitoreo de pacientes, seguimiento de pacientes, alertas de salud, profesionales de la salud, tecnología médica
 
-<meta name="author" content="CodeBrokers">
-```
-
+Autor (meta name="author"): CodeBrokers
 El `<title>` permitirá identificar claramente el producto y su orientación hacia los profesionales de la salud. La descripción resumirá la propuesta de valor de VitaLink para mejorar su representación en los resultados de búsqueda. Las palabras clave estarán relacionadas directamente con los conceptos utilizados en la Landing Page, evitando incorporar términos que no representen el propósito del producto.
 
 ### Tags de viewport y responsividad
 
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-```
+Viewport (meta name="viewport"): width=device-width, initial-scale=1.0
+
+Compatibilidad (meta http-equiv="X-UA-Compatible"): IE=edge
 
 Estas etiquetas permitirán que la Landing Page se adapte correctamente a diferentes tamaños de pantalla y dispositivos, manteniendo la experiencia responsiva definida para VitaLink.
 
@@ -163,19 +159,17 @@ Estas etiquetas permitirán que la Landing Page se adapte correctamente a difere
 
 Para mejorar la presentación de VitaLink cuando la Landing Page sea compartida en redes sociales o plataformas de mensajería, se considerará la implementación de etiquetas Open Graph:
 
-```html
-<meta property="og:title" content="VitaLink | Monitoreo Preventivo para Profesionales de la Salud">
+og:title: VitaLink | Monitoreo Preventivo para Profesionales de la Salud
 
-<meta property="og:description" content="Monitoreo preventivo, alertas inteligentes y datos continuos para facilitar el seguimiento de pacientes.">
+og:description: Monitoreo preventivo, alertas inteligentes y datos continuos para facilitar el seguimiento de pacientes.
 
-<meta property="og:image" content="[URL de la imagen oficial de VitaLink]">
+og:image: [URL de la imagen oficial de VitaLink]
 
-<meta property="og:url" content="[URL oficial de VitaLink]">
+og:url: [URL oficial de VitaLink]
 
-<meta property="og:type" content="website">
+og:type: website
 
-<meta name="twitter:card" content="summary_large_image">
-```
+twitter:card: summary_large_image
 
 La imagen utilizada deberá corresponder a un recurso gráfico oficial de VitaLink, manteniendo la identidad visual de la marca.
 
@@ -191,9 +185,9 @@ Se considerará:
 
 - **Atributos `alt` descriptivos:** las imágenes deberán contar con textos alternativos relacionados con su contenido. Por ejemplo, para la imagen del dashboard clínico se podrá utilizar:
 
-```html
-<img alt="Dashboard clínico de VitaLink para monitoreo de pacientes">
-```
+
+img alt="Dashboard clínico de VitaLink para monitoreo de pacientes"
+
 
 - **Contenido relevante:** se utilizarán de manera natural términos relacionados con el monitoreo preventivo, alertas inteligentes, pacientes y profesionales de la salud, evitando la repetición excesiva de palabras clave.
 
@@ -207,26 +201,25 @@ La Web Application tendrá un objetivo diferente a la Landing Page, ya que estar
 
 ### Tags principales
 
-```html
-<title>VitaLink | Plataforma de Monitoreo de Salud</title>
+Título de la aplicación (etiqueta title): VitaLink | Plataforma de Monitoreo de Salud
 
-<meta name="description" content="Plataforma VitaLink para el seguimiento preventivo de pacientes, visualización de información de salud y gestión de alertas.">
+Descripción (meta name="description"): Plataforma VitaLink para el seguimiento preventivo de pacientes, visualización de información de salud y gestión de alertas.
 
-<meta name="keywords" content="VitaLink, plataforma de salud, monitoreo de pacientes, seguimiento de salud, alertas médicas">
+Palabras clave (meta name="keywords"): VitaLink, plataforma de salud, monitoreo de pacientes, seguimiento de salud, alertas médicas
 
-<meta name="author" content="CodeBrokers">
-```
+Autor (meta name="author"): CodeBrokers
 
 En la Web Application, el contenido SEO tendrá una función principalmente descriptiva y de identificación, debido a que gran parte de la información estará disponible únicamente para usuarios con acceso a la plataforma.
 
 Para las diferentes vistas de la aplicación se podrán utilizar títulos específicos manteniendo la identidad de VitaLink, por ejemplo:
 
-```html
-<title>Dashboard | VitaLink</title>
-<title>Pacientes | VitaLink</title>
-<title>Alertas | VitaLink</title>
-<title>Perfil | VitaLink</title>
-```
+Dashboard | VitaLink
+
+Pacientes | VitaLink
+
+Alertas | VitaLink
+
+Perfil | VitaLink
 
 La implementación de estos SEO Tags y Meta Tags permitirá mantener una identificación consistente de VitaLink tanto en su **Landing Page como en su Web Application**, diferenciando el propósito de cada experiencia. La Landing Page estará enfocada principalmente en la presentación del producto, posicionamiento y captación de usuarios, mientras que la Web Application estará orientada al acceso y uso de las funcionalidades de la plataforma.
 
