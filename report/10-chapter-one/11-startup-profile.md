@@ -65,7 +65,7 @@ A largo plazo, VitaLink podrá evolucionar mediante la integración con disposit
     \textbf{Aporte al equipo:} Contribución al desarrollo del proyecto mediante sus habilidades en C++, responsabilidad, orientación a resultados y trabajo en equipo, participando en la implementación de soluciones de software, innovación tecnológica y apoyo en la gestión de proyectos.
     & 
     \vspace{-0.5cm} % Ajusta este valor para subir/bajar la foto
-    \includegraphics[width=\linewidth]{assets/f1.jpeg}
+    \includegraphics[width=\linewidth]{assets/f4.jpeg}
 \end{tabular}
 
 \vspace{0.8cm}
@@ -86,14 +86,14 @@ A largo plazo, VitaLink podrá evolucionar mediante la integración con disposit
 
 \noindent
 \begin{tabular}{p{0.72\textwidth} p{0.23\textwidth}}
-    \textbf{Integrante 1: (Escribe aca)} \newline
-    \textbf{Código de estudiante:} (Escribe aca) \newline
-    \textbf{Carrera:} (Escribe aca) \newline
-    \textbf{Descripción:} (Escribe aca) \newline
-    \textbf{Aporte al equipo:} (Escribe aca)
+    \textbf{Integrante: Vargas Manchinelli, Deiby Juan} \newline
+    \textbf{Código de estudiante:} u20211F962 \newline
+    \textbf{Carrera:} Ingeniería de Software \newline
+    \textbf{Descripción:} Estudiante de Ingeniería de Software orientado al desarrollo de soluciones tecnológicas innovadoras y eficientes. Combinación de pensamiento analítico, adaptabilidad a nuevos entornos técnicos y sólida capacidad de trabajo en equipo para abordar desafíos complejos de ingeniería. \newline
+    \textbf{Aporte al equipo:} Enfoque en el desarrollo de soluciones técnicas eficientes, aplicación de pensamiento analítico para la resolución de problemas complejos y colaboración activa en equipo para garantizar entregas exitosas.
     & 
     \vspace{-0.5cm} % Ajusta este valor para subir/bajar la foto
-    \includegraphics[width=\linewidth]{assets/f1.jpeg}
+    \includegraphics[width=\linewidth]{assets/f5.jpeg}
 \end{tabular}
 
 
