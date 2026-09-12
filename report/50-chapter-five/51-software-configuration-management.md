@@ -240,54 +240,6 @@ El equipo utilizará **GitFlow Workflow** para organizar las ramas de desarrollo
 
 ---
 
-## 5.1.2. Source Code Management
-
-Para el seguimiento de modificaciones y el trabajo colaborativo durante el desarrollo de VitaLink se utilizará **Git** como sistema de control de versiones y **GitHub** como plataforma para almacenar y administrar los repositorios del proyecto.
-
-Cada producto de software contará con su propio repositorio, permitiendo mantener separados los diferentes componentes de la solución y facilitando su desarrollo, mantenimiento y despliegue.
-
-| Producto | Repositorio | Enlace |
-|----------|-------------|--------|
-| Landing Page | CodeBrokers Landing Page | https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page |
-| Frontend Web Application | Pendiente | Pendiente |
-| RESTful Web Services | Pendiente | Pendiente |
-
-El repositorio correspondiente a los RESTful Web Services almacenará el código fuente del backend junto con los archivos correspondientes a las pruebas unitarias, pruebas de integración y pruebas de aceptación necesarias para comprobar el correcto funcionamiento de los servicios implementados.
-
----
-
-### GitFlow Workflow
-
-Para organizar el desarrollo colaborativo se utilizará **GitFlow Workflow**, permitiendo separar las versiones estables del producto de los cambios que todavía se encuentran en desarrollo.
-
-Las principales ramas utilizadas serán:
-
-- `main`: contendrá las versiones estables y aprobadas de los productos.
-- `develop`: será utilizada como rama principal de integración durante el desarrollo.
-- `feature`: permitirá desarrollar nuevas funcionalidades o modificaciones de manera independiente.
-- `release`: permitirá preparar nuevas versiones antes de incorporarlas a la rama principal.
-- `hotfix`: permitirá realizar correcciones urgentes sobre versiones existentes.
-
-Las ramas de funcionalidades serán creadas a partir de `develop`. Una vez finalizados y revisados los cambios, estos serán integrados nuevamente a `develop` mediante Pull Requests.
-
-Cuando se alcance una versión estable del producto, los cambios correspondientes serán preparados mediante una rama `release` antes de ser incorporados a `main`.
-
----
-
-### Branch Naming Convention
-
-Para mantener una nomenclatura uniforme durante el desarrollo, las ramas utilizarán nombres descriptivos utilizando **kebab-case**.
-
-Las ramas serán organizadas según el propósito de cada modificación utilizando las siguientes estructuras:
-
-- `feature/<nombre-funcionalidad>` para nuevas funcionalidades.
-- `release/<version>` para preparación de nuevas versiones.
-- `hotfix/<version>` para correcciones urgentes.
-
-Esta convención permitirá identificar fácilmente el propósito de cada rama y mantener organizado el flujo de trabajo del equipo.
-
----
-
 ### Semantic Versioning
 
 Para identificar las versiones liberadas de VitaLink se utilizará **Semantic Versioning**, siguiendo la estructura:
