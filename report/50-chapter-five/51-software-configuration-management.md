@@ -388,7 +388,8 @@ Pasos para el despliegue:
 
 4. GitHub Pages generará automáticamente una URL pública mediante la cual la Landing Page podrá ser visualizada y utilizada por los usuarios.
 
-**Repositorio:** Pendiente de completar.
+**Repositorio:** [https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page]
+.
 
 **URL desplegada:** Pendiente de completar.
 
