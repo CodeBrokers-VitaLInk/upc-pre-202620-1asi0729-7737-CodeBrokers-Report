@@ -171,6 +171,7 @@ Asimismo, los commits realizados durante la implementación siguieron la convenc
 La colaboración del equipo será evidenciada mediante las estadísticas y registros disponibles en GitHub.
 
 Link de commits del repositorio del reporte: [https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Report/compare/main...develop]
+
 Link de commits del repositorio del landing page: [https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/compare/main...develop]
 
 <img width="1817" height="935" alt="image" src="https://github.com/user-attachments/assets/4ed2dac3-f88c-480f-bda4-1f0ec673da43" />
