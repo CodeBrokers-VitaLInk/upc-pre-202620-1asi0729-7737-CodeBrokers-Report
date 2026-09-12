@@ -174,6 +174,12 @@ Link de commits del repositorio del reporte: [https://github.com/CodeBrokers-Vit
 
 Link de commits del repositorio del landing page: [https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/compare/main...develop]
 
+Durante el desarrollo del proyecto VitaLink, todos los integrantes del equipo participaron activamente en las diferentes actividades correspondientes al ciclo de desarrollo del producto.
+
+Las contribuciones del equipo no se limitan únicamente a los commits visibles en la sección de Contributors de GitHub, ya que algunos aportes fueron realizados mediante la organización de tareas, revisión de documentación, planificación de Sprints, diseño UX/UI, validación de entregables y coordinación del desarrollo.
+
+
+
 <img width="1817" height="935" alt="image" src="https://github.com/user-attachments/assets/4ed2dac3-f88c-480f-bda4-1f0ec673da43" />
 <img width="1135" height="946" alt="image" src="https://github.com/user-attachments/assets/5722e07a-916d-4d3b-8e4e-7f96016c16fd" />
 <img width="1696" height="878" alt="image" src="https://github.com/user-attachments/assets/3d301926-0a54-4b1f-8bde-2eee99f9e4a1" />
