@@ -84,4 +84,105 @@ Para la gestión y seguimiento de las actividades del Sprint se utilizará Trell
 **Sprint Velocity:** 10 Story Points
 
 **Sum of Story Points:** 10 Story Points
+### 5.2.1.4. Development Evidence for Sprint Review
+
+Durante el Sprint 1 se desarrollará la primera versión funcional de la Landing Page de VitaLink, considerando las funcionalidades y contenidos definidos en las User Stories correspondientes a la épica EP-01 Captación y Confianza.
+
+Para mantener la trazabilidad del desarrollo, los integrantes trabajarán utilizando ramas independientes siguiendo GitFlow y registrarán los cambios mediante Conventional Commits. Una vez finalizadas y revisadas las funcionalidades, estas serán integradas mediante Pull Requests.
+
+La siguiente tabla registra los principales cambios relacionados con la implementación del Sprint 1.
+
+**Link de commits del repositorio del landing page:**
+[https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/commits/develop]
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+|---|---|---|---|---|---|
+| upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page | develop | 389e581 | chore: add the logo. | Incorporación del logotipo del proyecto dentro de la Landing Page de VitaLink. | 2026-09-10 |
+| upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page | develop | 8fd9a4c | feat: add navigation bar and hero section | Implementación de la barra de navegación y sección Hero de la Landing Page. | 2026-09-10 |
+| upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page | develop | d55fc4a | feat: add navigation bar and hero section | Desarrollo de los componentes principales de navegación y presentación inicial del producto. | 2026-09-10 |
+
+
+#### 5.2.1.5. Execution Evidence for Sprint Review
+
+La ejecución del Sprint fue validada mediante la revisión funcional de la Landing Page implementada.
+
+Las principales funcionalidades verificadas fueron:
+
+- Visualización correcta de la propuesta de valor de VitaLink.
+- Presentación de beneficios para familiares y profesionales de salud.
+- Visualización de la sección de alertas automáticas.
+- Correcto funcionamiento en dispositivos móviles.
+- Navegación entre las diferentes secciones.
+
+
+#### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 1 no se implementaron RESTful Web Services debido a que el alcance estuvo enfocado en la construcción inicial de la Landing Page.
+
+La documentación de endpoints, Swagger/OpenAPI y pruebas mediante Postman será desarrollada en los siguientes Sprints cuando se implemente la capa backend de VitaLink.
+
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+
+Durante el Sprint 1 se realizó el despliegue de la primera versión funcional de la Landing Page de VitaLink. El objetivo de esta actividad fue publicar el sitio web en un entorno accesible públicamente, permitiendo validar su funcionamiento fuera del entorno local de desarrollo.
+
+Para el despliegue se utilizará **GitHub Pages**, aprovechando su integración directa con el repositorio de la Landing Page y su capacidad para publicar sitios web estáticos desarrollados con HTML, CSS y JavaScript.
+
+#### Proceso de despliegue
+
+El proceso de despliegue de la Landing Page se realizará mediante los siguientes pasos:
+
+1. Crear el repositorio correspondiente a la Landing Page de VitaLink dentro de GitHub.
+
+2. Subir e integrar en la rama principal los archivos HTML, CSS, JavaScript y recursos estáticos necesarios para el funcionamiento del sitio.
+
+3. Ingresar a la configuración del repositorio mediante la opción `Settings`.
+
+4. Acceder a la sección `Pages` dentro de la configuración del repositorio.
+
+5. Configurar el origen del despliegue seleccionando la rama `main` y la carpeta raíz `/`.
+
+6. Guardar la configuración para iniciar el proceso de publicación mediante GitHub Pages.
+
+7. Esperar a que GitHub complete el proceso de despliegue y genere la URL pública correspondiente.
+
+8. Acceder a la URL generada y verificar que la Landing Page se visualice correctamente y que sus principales secciones funcionen según lo esperado.
+
+#### 5.2.1.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 1, el equipo trabajó de manera colaborativa utilizando GitHub como plataforma principal para el control de versiones y seguimiento de los aportes realizados durante el desarrollo de la Landing Page de VitaLink.
+
+Cada integrante participó en las actividades asignadas mediante ramas independientes creadas a partir de la rama `develop`. Las funcionalidades desarrolladas fueron posteriormente integradas mediante Pull Requests, permitiendo revisar los cambios antes de incorporarlos al proyecto.
+
+Los integrantes y sus respectivos usuarios de GitHub son:
+
+| Team Member | GitHub Username |
+|---|---|
+| Fernando Contreras | FernSkibidi69 |
+| Pablo Martinez | Delzekl |
+| Yazid Said | BL4Z3K4D |
+| Kirk Quiliano | Kirkcito |
+| Deiby Vargas | poluxbinPe |
+
+Durante el Sprint se utilizó una estrategia basada en GitFlow, manteniendo la rama `develop` como rama de integración y utilizando ramas `feature/*` para las funcionalidades desarrolladas.
+
+Asimismo, los commits realizados durante la implementación siguieron la convención Conventional Commits, facilitando la identificación de cambios relacionados con nuevas funcionalidades, correcciones, documentación y estilos.
+
+La colaboración del equipo será evidenciada mediante las estadísticas y registros disponibles en GitHub.
+
+Link de commits del repositorio del reporte: [https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Report/compare/main...develop]
+Link de commits del repositorio del landing page: [https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/compare/main...develop]
+
+<img width="1817" height="935" alt="image" src="https://github.com/user-attachments/assets/4ed2dac3-f88c-480f-bda4-1f0ec673da43" />
+<img width="1135" height="946" alt="image" src="https://github.com/user-attachments/assets/5722e07a-916d-4d3b-8e4e-7f96016c16fd" />
+<img width="1696" height="878" alt="image" src="https://github.com/user-attachments/assets/3d301926-0a54-4b1f-8bde-2eee99f9e4a1" />
+<img width="1578" height="903" alt="image" src="https://github.com/user-attachments/assets/58a90baf-3eb1-4291-a1ef-3481a7ebafff" />
+<img width="1871" height="933" alt="image" src="https://github.com/user-attachments/assets/cd4445d8-b95a-4d82-b700-5f52e67d5065" />
+<img width="1806" height="910" alt="image" src="https://github.com/user-attachments/assets/72322c36-e9b7-4cf3-89b2-e352208edd84" />
+<img width="1729" height="888" alt="image" src="https://github.com/user-attachments/assets/1a8e2747-266f-46aa-8a4d-5e9173228305" />
+<img width="1637" height="764" alt="image" src="https://github.com/user-attachments/assets/296b1690-d39a-4bf9-a07b-9fa1fd474c83" />
+
+
+<img width="1837" height="644" alt="image" src="https://github.com/user-attachments/assets/a7ab456d-0942-413f-8609-8f3e66d9f866" />
+
 
