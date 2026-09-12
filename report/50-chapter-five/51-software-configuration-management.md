@@ -329,7 +329,7 @@ Los principales tipos utilizados serán:
 
 Ejemplos:
 
-```text
+
 feat(landing): add hero section
 
 fix(auth): correct user authentication
